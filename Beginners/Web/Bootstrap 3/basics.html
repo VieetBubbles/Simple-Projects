@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,52 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
 </head>
+
 <body>
     <!-- Lesson on how to use the basics of Bootstrap 3 -->
 
     <!-- Boostrap is just the css file that contains all the pre-made css classes which you need to visit the official website to search up which effect you desire to use. -->
-    <h1>Bootstrap Basics</h1>
 
-    <button class="btn btn-success btn-lg">Click Me</button>
+    <div class="container">
+        <!-- use the container class to center the jumbotron and create a container for addition text or tags. -->
+        <div class="jumbotron">
+            <h1>Hello World</h1>
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+                content or information.</p>
+            <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn More</a></p>
+        </div>
+        <h1>Bootstrap Basics</h1>
 
-    <button class="btn btn-success btn-lg active">I am Active</button>
+        <button class="btn btn-success btn-lg">Click Me</button>
 
-    <button class="btn btn-success btn-lg disabled">I am Disabled</button>
+        <button class="btn btn-success btn-lg active">I am Active</button>
 
-    <a href="https://getbootstrap.com/" class="btn btn-info btn-lg">Bootsrap Docs</a>
+        <button class="btn btn-success btn-lg disabled">I am Disabled</button>
+
+        <a href="https://getbootstrap.com/" class="btn btn-info btn-lg">Bootsrap Docs</a>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
 </body>
+
 </html>
