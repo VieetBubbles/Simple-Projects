@@ -1,0 +1,66 @@
+/* font-family works with built-in fonts on your computer */
+/* font-family */
+p {
+    font-family: Arial;
+}
+
+h1 {
+    font-family: Georgia;
+}
+
+/* font-size */
+/* Most developers will at the start of the css file attempt to set the body's font size to 20px or similar range in order to make sure the font size is set to a known value, instead o sticking with the default browser's font size. */
+body {
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 5.0em;
+}
+
+p {
+    font-size: 2.0em;
+}
+
+/* the em measurement means that the measurement is relative to the closest parent. Meaning, that the it will be double, or lessen basen of the parent's measurements. */
+/* rem is where the parent is always the root and is relative to whatever measurement the root has. */
+span {
+    font-size: 2.0em;
+}
+
+/* font-weight */
+p {
+    font-weight: bold;
+    /* font-weight: normal; */
+}
+
+/* line-height */
+/* This is the equivalent of using line-spacing in a word document */
+p {
+    line-height: 2;
+}
+
+/* text-align */
+/* The equivalent of where to place the text: left, center, or right in a word document */
+h1 {
+    text-align: center;
+}
+
+/* text-decoration */
+/* How you would give a word/text a underline or a line through the middle */
+span {
+    text-decoration: line-through;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+/* Using Google Fonts */
+/* Make sure you copy and paste in the link tag and then the css code on the embed scetion from the website. */
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+p {
+    font-family: 'Indie Flower', cursive;
+}

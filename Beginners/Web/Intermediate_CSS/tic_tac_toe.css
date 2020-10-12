@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+table {
+    /* The wicth percentage is only if you want to make the inside of each cell change as the size of the browser change. Without the percentage the cell's size stays the same and the margin changes. */
+    /* width: 50%; */
+    margin: auto;
+
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.mid_column {
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.mid_row {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}

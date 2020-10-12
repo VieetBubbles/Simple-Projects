@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs Demo</title>
+</head>
+<body>
+    <!-- Lesson on hoe to use the drop down and radio buttons -->
+    <!-- radio button: Once clicked the button, you can't toggle on or off. -->
+    <!-- select tag -->
+    <!-- textarea tag: creates a box that allows the user to type in stuff. -->
+
+    <p>Do you prefer cats or dogs?</p>
+    
+    <!-- In order to make sure that only 1 radio button is selected, you use the name="" atrribute to distinguish them. It allows HTML to refer to it by and how it is sent by http request. -->
+    <!-- By giving the input tag attribute the same name="", we can connect them. Thus, making sure that we can only pick 1 out of the listed same name options. -->
+    <form action="" method="get">
+        <label for="dogs">Dogs: </label>
+        <input type="radio" name="petChoice" id="dogs" value="DOGS">
+
+        <label for="cats">Cats: </label>
+        <input type="radio" name="petChoice" id="cats" value="CATS">
+        <button>Go!</button>
+        <!-- <input type="submit"> -->
+
+        <p>What is your favorite color?</p>
+        <select name="Color" id="">
+            <option value=""></option>
+            <option value="Red">Red</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Orange">Orange</option>
+        </select>
+
+        <!-- Using the select drop down menu tag and changing the value to be something else than the text/emoticons. -->
+        <p>What is your current mood?</p>
+
+        <select name="mood" id="">
+            <option value="happy">:)</option>
+            <option value="neutral">:|</option>
+            <option value="sad">:(</option>
+        </select>
+
+        <!-- <textarea> is another way to create inputs that are more than 1 line. -->
+        <br>
+        <br>
+        <textarea name="bit" id="" cols="30" rows="10"></textarea>
+
+    </form>
+</body>
+</html>

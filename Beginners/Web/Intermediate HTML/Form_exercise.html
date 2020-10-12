@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exercise</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="" method="post">
+        <!-- Requires input for user's first name -->
+        <label for="Fname">First Name: </label>
+        <input type="text" name="firstName" id="Fname" placeholder="John" required>
+
+        <!-- Requires input for user's last name -->
+        <label for="Lname">Last Name: </label>
+        <input type="text" name="lastName" id="Lname" placeholder="Smith" required>
+
+        <br>
+
+        <!-- Requires input for user's gender -->
+        <label for="male">Male </label>
+        <input type="radio" name="gender" id="male" value="male" required>
+
+        <label for="female">Female </label>
+        <input type="radio" name="gender" id="female" value="female" required>
+
+        <label for="other">Other </label>
+        <input type="radio" name="gender" id="other" value="other" required>
+
+        <br>
+
+         <!-- Requires the user's to input their email -->
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="your email" required>
+
+        <!-- Requires the user's to input their password; making sure it is between 5-10 characters long. -->
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" pattern=".{5,10}" title="requires 5-10 characters" required>
+
+        <br>
+
+        <!-- Required user to input their Birthday -->
+        <label for="birthday">Birthday: 
+            <select name="month" id="birthday" required>
+                <option value="">Month</option>
+                <option value="January">1</option>
+                <option value="February">2</option>
+                <option value="March">3</option>
+                <option value="April">4</option>
+            </select>
+
+            <select name="day" id="birthday" required>
+                <option value="">day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+    
+            <select name="year" id="birthday" required>
+                <option value="">year</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+            </select>
+        </label>
+
+        <br>
+        
+        <!-- Requires the user to check a box to the terms of service. -->
+        <label for="agreed">I agree to the terms and conditions </label>
+        <input type="checkbox" name="terms&service" id="agreed" required>
+
+        <br>
+        
+        <!-- Button to submit the inputs as a j string-->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

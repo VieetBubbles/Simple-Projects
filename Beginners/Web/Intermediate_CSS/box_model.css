@@ -1,0 +1,23 @@
+p {
+    /* Using a border to visually represent how each element has a box surrounding it. */
+    border: 2px solid blue;
+
+    /* Content - Width and Height */
+    /* How to manipukate the content inside the box to be a certain size instead of the default size of filling up the screen to the right. */
+    /* often you use % as a measurement because your measuring it against the body. % is also used to for responsive design too. */
+    width: 50%;
+    height: 300px;
+
+    /* Padding */
+    /* The space inside the element box */
+    padding-left: 40px;
+
+    /* Margin */
+    /* The space outside the element's border box. When we do margin by itself, we're asigning a margin space to all 4 sides of the box.*/
+    /* margin: 100px; */
+
+    /* margin: 20px 40px 500px 100px; */
+    /* margin: top right bottom left */
+    /* auto will try to do the calculation for you based on a previous property */
+    margin: 0 auto 0 auto;
+}

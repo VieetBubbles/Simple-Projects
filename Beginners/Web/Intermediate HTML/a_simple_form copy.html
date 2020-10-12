@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Create a simple login form with no back-end -->
+
+    <h1>Login</h1>
+
+    <!-- action - where the form sends data to -->
+    <!-- method - what http method (GET/POST) -->
+    <!-- name - used to identify stuff in the back-end -->
+
+    <!-- The <label> tag is used for accessibility. -->
+    <!-- In order to use <label> this way... the for="" atrribute value must match the id="" attribute value. -->
+        <form action="https://www.wikipedia.org/" method="GET">
+        <label for="username">Username: </label>
+        <input id="username" name="username" type="text" placeholder="username">
+
+        <label for="password">Password: </label>
+        <input id="password" name="password" type="password" placeholder="password">
+
+        <button>Submit</button>
+        <input type="submit">
+    </form>
+
+
+
+    <!-- An alternative version of using <label>. -->
+
+    <!-- <form action="https://www.wikipedia.org/" method="GET">
+        <label for="">
+            Username: 
+            <input name="username" type="text" placeholder="username">
+        </label>
+
+        <label for="">
+            Password:
+            <input name="password" type="password" placeholder="password">
+        </label>
+        <button>Submit</button>
+        <input type="submit">
+    </form> -->
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+h1 {
+    color: red;
+
+    /* in order for a border to show up on the browser, you must use the border-width and border-style and border-color properties to specify the size of the border. Think of the  order property as the same as how the <form> tag is used. */
+    border: 2px solid blue;
+}
+
+li {
+    color: green;
+}
+
+h4 {
+    background-color: rgb(255, 100, 80);
+}
+
+body {
+    background-image: url(https://cdn11.bigcommerce.com/s-own6dl/images/stencil/2048x2048/products/3827/10361/IMG_7292_edited-1__54678.1535575472.jpg?c=2);
+
+    /* property that makes sure if the image used is too small for the screen, the image does not repeat itself ti fill up the background screen */
+    background-repeat: no-repeat;
+
+    /* property that covers the entire background screen with the url image to the best possible dimensions. */
+    background-size: cover;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- How to use validation in HTML. -->
+
+    <!-- The required attribute validates that an input is not empty. -->
+    <!-- There are also type validations. Where each type="" values corresponds to the required attribute. I.e. the pop-up text and error will be different for whatever you put as a value in type="".-->
+    <h1>Login</h1>
+
+        <form action="https://www.wikipedia.org/" method="GET">
+        <label for="Email">Email: </label>
+        <input id="Email" name="Email" type="email" placeholder="Email" required>
+
+        <label for="password">Password: </label>
+        <input id="password" name="password" type="password" placeholder="password" required>
+
+        <button>Submit</button>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

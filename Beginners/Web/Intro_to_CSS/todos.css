@@ -1,0 +1,14 @@
+/* Example of an element selector: Selecting all instances of a given element */
+li {
+    border: 2px solid red;
+}
+
+/* id selectors: selecting an element with a given id. Only one per page; You can only call the id once and is mainly used to single out a specific element. You can, however, have multiple id="" on a html page but each id="" value must be different/unique from one another. */
+#noob {
+    background-color: yellow;
+}
+
+/* class selectors: selects all elements with a given class. Think of it like an id but with the ability to apply it to as many elements of a page. */
+.completed {
+    text-decoration: line-through;
+}
