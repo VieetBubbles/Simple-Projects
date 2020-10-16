@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- An introduction to HTML tables -->
     <!-- Inside of a <table> element you must have <tr> elements. <tr> means table rows. And inside that element you must have <td> element. <td> is table data cell -->
     <!-- <th> is table header. It is used to specify a header for a table. -->
     <!-- A better way to write a table is by using the <thead> and <tbody> tags for stronger emphasis. -->
     <table border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Breed</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Rusty</td>
-                <td>2</td>
-                <td>Mutt</td>
-            </tr>
-            <tr>
-                <td>Wyatt</td>
-                <td>13</td>
-                <td>Golden</td>
-            </tr>
-        </tbody>
-        
-        
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Breed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rusty</td>
+          <td>2</td>
+          <td>Mutt</td>
+        </tr>
+        <tr>
+          <td>Wyatt</td>
+          <td>13</td>
+          <td>Golden</td>
+        </tr>
+      </tbody>
     </table>
 
-
-    
-</body>
+    <h2>Second Table</h2>
+    <table>
+      <thead>
+        <tr>
+            <!-- how to get two rows underneath a row and 2 columns -->
+            <!-- rowspan is telling the th to take up 2 whole rows. -->
+            <!-- colspan is telling the th to take up 2 whole columns. -->
+          <th rowspan="2">Animal</th>
+          <th colspan="2">Average Mass</th>
+          <th rowspan="2">Flighted</th>
+        </tr>
+        <tr>
+          <th>KG</th>
+          <th>LB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ostrich</td>
+          <td>104</td>
+          <td>230</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Somali</td>
+          <td>90</td>
+          <td>200</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Wild Turkey</td>
+          <td>13.5</td>
+          <td>29.8</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
