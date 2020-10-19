@@ -1,0 +1,47 @@
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+    /* Take 1 second to transition background-color into a circle */
+    /* without the property name given, the transition would animate everything related to the tag */
+    /* the last/4th value is the delay goven for the user to wait how much seconds before the animation starts */
+
+    /* this method is making the background-color have a 1s transition time, while the border-radius has a 2 second transition time. */
+    transition: background-color 1s, border-radius 2s;
+    /* transition: all 1s 1s; */
+}
+
+.circle:hover {
+    background-color: cyan;
+    /* 50% is the amount that makes a circle shape. */
+    border-radius: 50%;
+}
+
+section div {
+    height: 100px;
+    width: 100px;
+    background-color: turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:hover div {
+    margin-left: 500px;
+}
+
+/* transition-timeing-function is the style that you want the animation to be. */
+div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
