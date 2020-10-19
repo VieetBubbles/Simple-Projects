@@ -1,0 +1,46 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle {
+    background-color: #81b29a;
+}
+
+/* The default state of our box's position. Static means does nothing */
+#static #middle {
+    position: static;
+    top: 100px;
+}
+
+/* Once we change the position to relative, it'll be relative to itself based on the value of top/left/right/bottom. */
+#relative #middle {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+/* the box from just having the absolute property is behind/stacked the middle box. */
+/* the position of the box is based off what the parent's position is. */
+/* without setting the parent's psotion to be relative, the absolute's box would had been trying to be working with a static condtion. */
+/* the margin's of the parent's relative position is blocking the absolute's middle box from jumping out of it's range. */
+#absolute {
+    position: relative;
+}
+
+#absolute #middle {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+/* fixed is ofter used for navbars in order to keep the navbar from disapperaing once a user scrolls past it. */
+#fixed #middle {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
