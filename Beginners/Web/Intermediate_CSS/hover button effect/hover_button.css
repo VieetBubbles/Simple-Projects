@@ -1,0 +1,35 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* flexbox being used */
+    display: flex;
+    align-items: center;
+    /* can only be used with flex */
+    justify-content: center;
+    /* vh is 1% of the browser's size */
+    height: 100vh;
+    background-color: #151b29;
+}
+
+button {
+    /* takes away the button's default gray color */
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    /* padding 1em on top and bottom & 2em on left and right */
+    padding: 1em 2em;
+    /* the font-size changes because the default value of the button's fontosize is different from the body's */
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+button:hover {
+    border-color: #f1ff5c;
+    color: white;
+    /* box-shadow: adds a shadow to a element's box. Best to look up the measurement's on mdn. */
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    /* best to use transform, as it doesn't affect the margin's already set on the page. */
+    transform: translateY(-0.25em);
+
+    /* changes the user's cursor to be the finger pointing hand. */
+    cursor: pointer;
+}
