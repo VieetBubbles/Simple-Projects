@@ -1,0 +1,23 @@
+section {
+    width: 80%;
+    height: 800px;
+    /* background-image: url("https://images.pexels.com/photos/545042/pexels-photo-545042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+
+    /* background-repeat: no-repeat; */
+
+    /* background-position tells where on the image should used.  */
+    /* background-position: bottom; */
+
+    background: center
+    /50% no-repeat url("https://images.pexels.com/photos/545042/pexels-photo-545042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), violet;
+
+    margin: auto;
+
+    /* cover will try to cover the image without cropping it unless necessary */
+    /* background-size: cover; */
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}
