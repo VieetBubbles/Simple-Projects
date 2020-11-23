@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    /* Because we used flexbox inside a container/section tag, the divs are only going to be spaced accordingly inside the container/section's body and not outside of it. */
+    display: flex;
+    /* flex direction tells the display property how to display the content. In a vertical or horizontal or reverse. */
+    /* flex-direction: row is the default option*/
+    /* a column reverses the axises. */
+    flex-direction: row;
+    /* another method of moving the content on the main axis and you can evenly apply space using the option of space- */
+    justify-content: center;
+    /* using wrap makes it so that the tag's box isn't smushed together when it needs to shrink. it changes the alignment to fit within the container as best as possible with the best size available. */
+    /* wrap is often used to make rows on the next line of the main axis. */
+    /* Think of wrapping as reversing the direction of the starting position of the axises. */
+    flex-wrap: wrap;
+
+    /* align-items is distributing/moving content on the cross axis */
+    /* when you use the option baseline, it means that you're making sure everything is aligned on an underline. Think of it as having different sized letters all perfectly aligned on the same underline. */
+    align-items: center;
+
+    /* align-content is the ability to control the space between columns/rows ONLY when you have multiple rows/columns. */
+    /* you can only use align-content when you have wrap or wrap-reverse active */
+    align-content: space-between;
+}
+
+#box1 {
+    background-color: #80ffdb;
+}
+
+#box2 {
+    background-color: #64dfdf;
+}
+
+#box3 {
+    background-color: #48bfe3;
+}
+
+#box4 {
+    background-color: #5390d9;
+}
+
+#box5 {
+    background-color: #6930c3;
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    /* using max-width to set the width in order to make sure the boxes don't automatically shrink when you shrink the browser. */
+    /* max-width: 300px; */
+    font-size: 4em;
+    text-align: center;
+
+    /* flex0basis automatically sets the height/width of the element's box to be depending on what is specified in flex-direction. */
+    flex-basis: 400px;
+}
+
+div:nth-of-type(5) {
+    /* use align-self in order to move individual boxes at once */
+    align-self: center;
+    flex-grow: 2;
+}
+
+div:nth-of-type(1) {
+    /* flex-grow increases the element's box size */
+    flex-grow: 1;
+    /* flex-shrink only works if all the space is taken up and there's no more room available. */
+    flex-shrink: 5;
+}
+
+h2 {
+    text-align: center;
+}
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: #6930c3;
+    border: 2px solid white;
+    /* you need to add a flex-basis/flex in order to make the flex content show up on the browser */
+    flex: 1 2 300px;
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 1 800px;
+}
