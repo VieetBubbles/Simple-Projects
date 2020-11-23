@@ -1,0 +1,52 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+@media (width: 100px) {
+    /* This is telling us that when the screen is EXACTLY 100 Pixels, change the h1 color to purple. */
+    h1 {
+        color: purple
+    }
+}
+
+/* you want to start at the biggest pixel first then move downwards when using max-width. And the opposite us true with min-width */
+
+@media (min-width: 800px) {
+    /* This is telling us that when the screen is EXACTLY 800 Pixels AND upwards, change the h1 color to purple. */
+    /* Think of min-width as everything after 800 pixels will be purple */
+    h1 {
+        color: purple
+    }
+}
+
+@media (max-width: 800px) {
+    /* This is telling us that when the screen is EXACTLY 800 Pixels AND downwards, change the h1 color to red. */
+    /* Think of max-width as everything up to 800 pixels will be red */
+    h1 {
+        color: red
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    /* if the screen is between 600px AND 800px, then change the color. */
+}
+
+@media (orientation: landscape) {
+    body {
+        background-color: magenta;
+    }
+}
