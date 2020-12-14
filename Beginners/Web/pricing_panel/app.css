@@ -1,0 +1,187 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    /* using box-sizing: border-box in order to get a default width/height value that adjust for any padding and borders you might add. */
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #60a9ff;
+    /* You're using flexbox here in body tag, in order to manage the space in the whole body to accomodate each box/tag and then you create a nested flexbox for the .panel class to handle the panel's 3 items. */
+    /* think of this flexbox as handling the entire website's background/boxes and the other nested flexbox as handling only the class panel's content.*/
+    display: flex;
+
+    /* take each box/tag (or in this case: the main panel display containing all the 3 items) and center them in the middle of the screen. */
+    justify-content: center;
+    align-items: center;
+    /* min-height is making it so that the height can not be lower than the amount. */
+    min-height: 100vh;
+}
+
+/* This is our main white panel containing all our prices and buttons. */
+.panel {
+    background-color: white;
+
+    /* This is the size of our white panel */
+    border-radius: 10px;
+    padding: 15px 25px;
+
+    /* We set the width to be 100% of the screen because when the browser's size changes, the white panel always fits the screen and has no blue background color filling in the edges. */
+    width: 100%;
+
+    /* Remember that to use max-width, you need to specify the current width of the box and then set the new max-width. */
+    /* When using max-width, you're making sure the class .panel container is sized to your desire and that it won't get larger when the browser size is changed. */
+    max-width: 960px;
+
+    /* Remember that when display:flex, you're really making usre that everything inside the .panel class is sharing correct spacing and deciding if they appear as a row or column. */
+    /* Here we set the default flexbox settings to be columns and be centered in the screen with all text be center and uppercase. */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+/* get rid of the ugly border at the bottom of the panel screen. */
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    /* add margins around the images. */
+    margin-bottom: 25px;
+    /* increase the size of the img. */
+    max-width: 100%;
+}
+
+.pricing-header {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-features {
+    /* 50px on top, none on the sides, and 25px on the bottom. */
+    margin: 50px 0 25px;
+    color: #016ff9;
+}
+
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    /* remember line-heigh is line-spacing from micorsoft word. */
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1f1ff;
+}
+
+/* add a border-line at the bottom of each of the items. */
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+    color: #016ff9;
+    /* make sure the content is always treated as a block-content and not in-line when the screen changes size. */
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-button {
+    border: 1px solid #9dd1ff;
+    /* use border-radius to create the curve edges on the border. */
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    /* add a samll timer of 200ms to control the speed of the hover effect. */
+    transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus {
+    background-color: #e1f1ff;
+}
+
+/* specifically saying select the class that also hass a class named .pricing-button and .is-featured */
+.pricing-button.is-featured {
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus{
+    background-color: #269aff;
+}
+
+/* using media queiries to make sure that the panel changes back from flexbox flex-direction column to row at a certain screen width. */
+/* remember, we made the web page mobile friendly 1st and are now making it desktop freindly. */
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+    /* get rid of the bottom border from when you need it during a column flexbox set-up. Then add new borders for the row set-up. */
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+
+        /* Add padding to adjust for the change in flex-direction. */
+        padding: 25px 50px;
+    }
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+}
