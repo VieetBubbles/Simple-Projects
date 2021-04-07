@@ -1,2 +1,2 @@
 # Simple-Projects
-Repository that host my general learning/re-learning projects.
+Repository that I use to learn web development andd store some simple projects I've done in the prgress.
